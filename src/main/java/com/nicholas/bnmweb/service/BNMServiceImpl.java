@@ -39,6 +39,8 @@ public class BNMServiceImpl implements BNMService {
 			.url(url)
 			.build();
 
+		//FinancialConsumerAlertMapper.
+
 		try (var response = okHttpClient.newCall(request).execute()) {
 			var body = response.body().string();
 			return JsonHelper.toObject(body, clazz);
