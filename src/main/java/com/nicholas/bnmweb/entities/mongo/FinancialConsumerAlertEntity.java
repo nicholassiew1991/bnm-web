@@ -10,7 +10,7 @@ import java.util.List;
 public class FinancialConsumerAlertEntity {
 
 	@Id
-	public String id;
+	private String id;
 
 	private String name;
 
