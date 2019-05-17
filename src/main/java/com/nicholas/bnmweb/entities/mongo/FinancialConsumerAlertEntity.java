@@ -3,6 +3,7 @@ package com.nicholas.bnmweb.entities.mongo;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 
@@ -16,7 +17,7 @@ public class FinancialConsumerAlertEntity {
 
 	private String registrationNo;
 
-	private Date addedDate;
+	private LocalDateTime addedDate;
 
 	private List<String> websites;
 
@@ -44,11 +45,11 @@ public class FinancialConsumerAlertEntity {
 		this.registrationNo = registrationNo;
 	}
 
-	public Date getAddedDate() {
+	public LocalDateTime getAddedDate() {
 		return addedDate;
 	}
 
-	public void setAddedDate(Date addedDate) {
+	public void setAddedDate(LocalDateTime addedDate) {
 		this.addedDate = addedDate;
 	}
 

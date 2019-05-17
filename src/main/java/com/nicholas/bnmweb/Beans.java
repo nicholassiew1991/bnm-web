@@ -10,7 +10,6 @@ public class Beans {
 
 	@Bean("bnmOkHttpClient")
 	public OkHttpClient okHttpClient() {
-
 		Interceptor interceptor = chain -> {
 			var newRequest = chain.request().newBuilder()
 				.addHeader("Accept", "application/vnd.BNM.API.v1+json")
@@ -18,8 +17,7 @@ public class Beans {
 			return chain.proceed(newRequest);
 		};
 
-		var clientBuilder = new OkHttpClient.Builder()
-			.addInterceptor(interceptor);
+		var clientBuilder = new OkHttpClient.Builder().addInterceptor(interceptor);
 
 		return clientBuilder.build();
 	}

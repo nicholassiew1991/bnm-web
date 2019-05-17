@@ -1,5 +1,6 @@
 package com.nicholas.bnmweb.service;
 
+import com.nicholas.bnmweb.repository.mongodb.FinancialConsumerAlertRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,8 +16,10 @@ public class BNMServiceTest {
 	@Autowired
 	private BNMServiceImpl bnmService;
 
+	@Autowired
+	private FinancialConsumerAlertRepository repository;
+
 	@Test
 	public void testGetConsumerAlert() throws ExecutionException, InterruptedException {
-		bnmService.getConsumerAlert();
 	}
 }
